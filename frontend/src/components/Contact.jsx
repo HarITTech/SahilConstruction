@@ -37,3 +37,31 @@ const Contact = () => {
   );
 };
 export default Contact;
+
+
+
+
+
+
+// import React from "react";
+
+// const Contact = () => {
+//   return (
+//     <section className="bg-gray-100 py-16">
+//       <div className="container mx-auto px-6 max-w-xl text-center">
+//         <h2 className="text-3xl font-bold mb-6">Need any help?.. Contact us</h2>
+//         <form className="space-y-4">
+//           <input type="text" placeholder="Name" className="w-full p-3 rounded border" />
+//           <input type="email" placeholder="Mail" className="w-full p-3 rounded border" />
+//           <input type="tel" placeholder="Phone" className="w-full p-3 rounded border" />
+//           <textarea placeholder="Message" rows="4" className="w-full p-3 rounded border"></textarea>
+//           <button className="bg-yellow-500 text-black px-6 py-3 rounded-lg hover:bg-yellow-400 transition">
+//             Send
+//           </button>
+//         </form>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default Contact;
