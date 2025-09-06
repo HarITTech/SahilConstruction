@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import Logo from "../assets/logo.png";
+// import Logo from "../assets/logo.png";
+import Logo from "../assets/logo_white.png";
+// import Logo from "../assets/sahil_logo.jpg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +12,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 w-full bg-navy-blue/20 backdrop-blur-md z-50 shadow-md">
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/"><img src={Logo} className="h-[70px] lg:h-[100px] w-auto" alt="Sahil Construction" /></Link>
+        <Link to="/"><img src={Logo} className="h-[60px] lg:h-[60px] my-2 w-auto" alt="Sahil Construction" /></Link>
 
         {/* Desktop Links */}
         <ul className="hidden md:flex space-x-8 text-white font-medium">

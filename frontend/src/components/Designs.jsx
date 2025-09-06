@@ -1,20 +1,99 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+import demoWork from "../assets/workImg/demo_work.jpg"
 
-const designs = ["/design1.png", "/design2.png", "/design3.png", "/design4.png"];
+const designs = [
+  {
+    id: 1,
+    img: demoWork,
+    title: "Modern Villa",
+    tagline: "Luxury Living",
+    desc: "A contemporary villa design blending elegance and comfort.",
+  },
+  {
+    id: 2,
+    img: demoWork,
+    title: "Urban Residence",
+    tagline: "City Lifestyle",
+    desc: "Perfectly designed for urban living with smart space utilization.",
+  },
+  {
+    id: 3,
+    img: demoWork,
+    title: "Classic Bungalow",
+    tagline: "Timeless Charm",
+    desc: "A traditional design with a modern touch for family homes.",
+  },
+  {
+    id: 4,
+    img: demoWork,
+    title: "Eco House",
+    tagline: "Green & Smart",
+    desc: "Sustainable living with eco-friendly architecture.",
+  },
+  {
+    id: 5,
+    img: demoWork,
+    title: "Premium Villa",
+    tagline: "Luxury & Style",
+    desc: "High-end villa with unique architectural detailing.",
+  },
+];
 
-const Designs = () => {
+const OurDesigns = () => {
+  const navigate = useNavigate();
+
   return (
-    <section className="py-16">
-      <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center mb-12">Our Designs</h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          {designs.map((src, i) => (
-            <img key={i} src={src} alt="Design" className="rounded-lg shadow-md" />
+    <section className="relative py-16 bg-gradient-to-br from-white via-gray-50 to-blue-50">
+      <div className="container mx-auto px-4">
+        {/* Heading */}
+        <h2 className="text-center text-3xl md:text-4xl font-serif-display text-navy-blue mb-12">
+          Our Designs
+        </h2>
+
+        {/* Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
+          {designs.map((design, index) => (
+            <motion.div
+              key={design.id}
+              whileHover={{ scale: 1.05 }}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.15 }}
+              className="relative w-full max-w-sm rounded-xl overflow-hidden shadow-lg group"
+            >
+              {/* Image */}
+              <img
+                src={design.img}
+                alt={design.title}
+                className="w-full h-64 object-cover rounded-xl"
+              />
+
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-end p-4 text-white">
+                <h3 className="text-lg font-bold">{design.title}</h3>
+                <p className="text-sm italic">{design.tagline}</p>
+                <p className="text-xs mt-1">{design.desc}</p>
+              </div>
+            </motion.div>
           ))}
+        </div>
+
+        {/* Explore Button */}
+        <div className="flex justify-center mt-12">
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => navigate("/work")}
+            className="px-6 py-3 bg-navy-blue text-white rounded-full font-medium shadow-md hover:bg-light-blue transition"
+          >
+            Explore More
+          </motion.button>
         </div>
       </div>
     </section>
   );
 };
 
-export default Designs;
+export default OurDesigns;

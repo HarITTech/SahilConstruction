@@ -151,17 +151,17 @@ const Hero = () => {
                     </div>
 
                     <div className="grid grid-row-3 place-items-center md:grid-cols-2 lg:grid-cols-3 gap-5 lg:h-[270px] lg:mt-11 py-5 lg:py-0 px-auto">
-                        <div className="flex flex-col items-center justify-center w-[80%] min-w-[220px] lg:h-[160px] bg-[#003B66] py-4 px-6 rounded-xl text-white">
-                            <span className="text-2xl lg:text-4xl font-semibold font-serif-display italic ">50+ </span>
-                            <span className="text-lg lg:text-xl font-semibold font-serif-display italic ">Happy Customers</span>
+                        <div className="flex flex-col items-center justify-center w-[80%] min-w-[200px] lg:h-[160px] bg-[#003B66] py-4 px-6 rounded-xl text-white gap-1 ">
+                            <span className="text-2xl lg:text-4xl font-semibold font-serif-display italic ">30+ </span>
+                            <span className="text-lg lg:text-xl font-serif-display italic ">Houses Build</span>
                         </div>
-                        <div className="flex flex-col items-center justify-center w-[80%] min-w-[220px] lg:h-[160px] bg-[#003B66] py-4 px-6 rounded-xl text-white">
-                            <span className="text-2xl lg:text-4xl font-semibold font-serif-display italic ">50+ </span>
-                            <span className="text-lg lg:text-xl font-semibold font-serif-display italic ">Happy Customers</span>
+                        <div className="flex flex-col items-center justify-center w-[80%] min-w-[200px] lg:h-[160px] bg-[#003B66] py-4 px-6 rounded-xl text-white gap-1 ">
+                            <span className="text-2xl lg:text-4xl font-semibold font-serif-display italic ">5+ </span>
+                            <span className="text-lg lg:text-xl font-serif-display italic ">Years of Experience</span>
                         </div>
-                        <div className="flex flex-col items-center justify-center w-[80%] min-w-[220px] lg:h-[160px] bg-[#003B66] py-4 px-6 rounded-xl text-white">
-                            <span className="text-2xl lg:text-4xl font-semibold font-serif-display italic ">50+ </span>
-                            <span className="text-lg lg:text-xl font-semibold font-serif-display italic ">Happy Customers</span>
+                        <div className="flex flex-col items-center justify-center w-[80%] min-w-[200px] lg:h-[160px] bg-[#003B66] py-4 px-6 rounded-xl text-white gap-1 ">
+                            <span className="text-2xl lg:text-4xl font-semibold font-serif-display italic ">10+ </span>
+                            <span className="text-lg lg:text-xl font-serif-display italic ">Skilled Engineers</span>
                         </div>
                     </div>
                 </div>
