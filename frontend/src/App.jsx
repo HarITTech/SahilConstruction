@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Work from "./pages/Work";
+import Work from "./components/work/Work";
 import Services from "./pages/Services";
 // import Contact from "./components/Contact";
 
