@@ -18,7 +18,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 w-full bg-[#043252f1] backdrop-blur-md z-50 shadow-md">
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/">
+        <Link to="/" onClick={() => setIsOpen(false)}>
           <img
             src={Logo}
             className="h-[60px] lg:h-[60px] my-2 w-auto"
@@ -71,7 +71,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden text-white px-6 py-4 space-y-4">
+        <div className="md:hidden text-white px-6 py-4 space-y-4" onClick={() => setIsOpen(false)}>
           <Link to="/" className={`${linkClasses("/")} block`}>
             Home
           </Link>

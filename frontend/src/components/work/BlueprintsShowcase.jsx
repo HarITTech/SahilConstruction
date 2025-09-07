@@ -34,7 +34,7 @@ const ChevronRight = () => (
 const BlueprintsShowcase = () => {
   const styles = {
     main: {
-      minHeight: "100vh",
+      minHeight: "40vh",
       backgroundColor: "#0f172a",
       fontFamily: "Georgia, serif",
     },

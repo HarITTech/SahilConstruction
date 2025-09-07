@@ -150,7 +150,7 @@ export default function Work() {
                     <img
                       src={currentProject.img}
                       alt="project"
-                      className="w-full h-[520px] object-cover rounded-lg shadow"
+                      className="w-full h-auto object-cover rounded-lg shadow"
                     />
                   </div>
                 </div>
@@ -243,7 +243,7 @@ export default function Work() {
               ].map((p, i) => (
                 <div
                   key={i}
-                  className="snap-center min-w-[300px] md:min-w-[380px] bg-[#EBEFF2] rounded-2xl p-6 shadow-md relative flex-shrink-0"
+                  className="snap-center min-w-[200px] w-[80%] md:min-w-[380px] bg-[#EBEFF2] rounded-2xl p-6 shadow-md relative flex-shrink-0"
                 >
                   {/* Image */}
                   <div className="rounded-lg overflow-hidden mb-4 h-48">
@@ -290,11 +290,11 @@ export default function Work() {
               </button>
             </div>
             {/* All Properties button aligned to bottom-right */}
-            <div className="flex justify-end mt-8">
+            {/* <div className="flex justify-end mt-8">
               <button className="bg-[#043152] text-white rounded-md px-5 py-2 text-sm font-semibold shadow">
                 All Properties
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

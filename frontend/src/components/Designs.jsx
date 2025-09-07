@@ -174,7 +174,7 @@ const Designs = () => {
           </div>
 
           {/* Center Image */}
-          <div className="place-items-center z-50">
+          <div className="place-items-center z-40">
             {designs.slice(2, 3).map((design) => (
               <Card key={design.id} design={design} large />
             ))}

@@ -149,9 +149,9 @@ const Events = () => {
 
               {/* Price Button */}
               <div className="mt-3 flex justify-end">
-                <span className="bg-[#08213e] text-white px-4 py-1 rounded-md text-sm">
+                <a  href="#contact" className="bg-[#08213e] text-white px-4 py-1 rounded-md text-sm">
                   {event.price}
-                </span>
+                </a>
               </div>
             </div>
           ))}
