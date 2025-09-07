@@ -12,7 +12,7 @@ const Footer = () => {
   };
 
   return (
-    <div className="w-full flex flex-col justify-end bg-white">
+    <div className="w-full flex flex-col justify-end bg-white" id="contact">
       {/* Contact Section */}
       <div className="bg-[#f6f8fa] mx-auto mt-10 mb-[-80px] px-4 py-10 rounded-lg shadow-md w-[90%] max-w-[900px] text-center relative z-20">
         <h2 className="text-[2.1rem] font-normal mb-2">Need any help?..</h2>

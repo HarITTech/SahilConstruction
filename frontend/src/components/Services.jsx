@@ -39,7 +39,7 @@ const Services = () => {
     <section id="services" className="bg-[#043152] text-white z-40">
       {/* <div className=" hidden md:flex bg-white h-[272px]"></div> */}
       <div className="container mx-auto px-6 py-10">
-        <h2 className="text-[70px] font-serif text-center mb-12">Our Services</h2>
+        <h2 className="text-[60px] font-serif text-center mb-12">Our Services</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((s, i) => (
             <div key={i} className="bg-white text-[#0f1724] p-6 rounded-lg shadow-lg">

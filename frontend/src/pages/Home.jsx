@@ -19,7 +19,7 @@ function Home() {
       <Designs />
       <Testimonials />
       <Events />
-      <Contact />
+      {/* <Contact /> */}
       {/* <Footer /> */}
     </div>
   );
