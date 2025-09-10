@@ -102,12 +102,12 @@ const About = () => {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="bg-[rgba(235,239,242,0.67)] border-[1px] rounded-lg border-[#043152] shadow-[0_8px_32px_rgba(4,49,82,0.08)] backdrop-blur-[47px] max-w-[300px] w-full text-center p-5 sm:p-4"
+              className="bg-[rgb(255,255,255)] border-[1px] rounded-xl border-[#043152] shadow-[0_8px_32px_rgba(4,49,82,0.08)] backdrop-blur-[47px] max-w-[300px] w-full text-center p-5 sm:p-4"
             >
               <img
                 src={member.img}
                 alt={member.name}
-                className="w-full aspect-square object-cover mb-4"
+                className="w-full aspect-square object-cover mb-4 rounded-lg"
               />
               <div className="text-[#043152] font-bold  text-lg mb-1">
                 {member.name}
