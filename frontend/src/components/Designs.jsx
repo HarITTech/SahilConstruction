@@ -110,40 +110,45 @@
 
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import demoWork from "../assets/workImg/demo_work.jpg";
+import design1 from "../assets/designsImg/design1.jpg";
+import design2 from "../assets/designsImg/design2.jpg";
+import design3 from "../assets/designsImg/design3.jpg";
+import design4 from "../assets/designsImg/design4.jpg";
+import design5 from "../assets/designsImg/design5.jpg";
+
 
 const designs = [
   {
     id: 1,
-    img: demoWork,
+    img: design1,
     title: "Modern Villa",
     tagline: "Luxury Living",
     desc: "A contemporary villa design blending elegance and comfort.",
   },
   {
     id: 2,
-    img: demoWork,
+    img: design2,
     title: "Urban Residence",
     tagline: "City Lifestyle",
     desc: "Perfectly designed for urban living with smart space utilization.",
   },
   {
     id: 3,
-    img: demoWork,
+    img: design3,
     title: "Classic Bungalow",
     tagline: "Timeless Charm",
     desc: "A traditional design with a modern touch for family homes.",
   },
   {
     id: 4,
-    img: demoWork,
+    img: design4,
     title: "Eco House",
     tagline: "Green & Smart",
     desc: "Sustainable living with eco-friendly architecture.",
   },
   {
     id: 5,
-    img: demoWork,
+    img: design5,
     title: "Premium Villa",
     tagline: "Luxury & Style",
     desc: "High-end villa with unique architectural detailing.",
@@ -209,7 +214,7 @@ const Card = ({ design, large }) => {
   return (
     <div
       className={`relative rounded-xl overflow-hidden shadow-lg group transition transform hover:scale-105 ${
-        large ? "w-[90%] lg:w-[450px] md:w-[250px]" : "w-[90%] lg:w-[450px]"
+        large ? "w-[90%] lg:max-w-[450px] md:max-w-[250px]" : "w-[90%] lg:max-w-[450px]"
       }`}
     >
       {/* Image */}
@@ -221,9 +226,9 @@ const Card = ({ design, large }) => {
 
       {/* Overlay on hover */}
       <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-end p-4 text-white">
-        <h3 className="text-lg font-bold">{design.title}</h3>
-        <p className="text-sm italic">{design.tagline}</p>
-        <p className="text-xs mt-1">{design.desc}</p>
+        <h3 className="text-base lg:text-lg font-bold">{design.title}</h3>
+        <p className="text-xs lg:text-sm italic">{design.tagline}</p>
+        <p className="text-[10px] lg:text-xs mt-1">{design.desc}</p>
       </div>
     </div>
   );

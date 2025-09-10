@@ -1,18 +1,20 @@
-import HeroBg from "../assets/Hero_bg.png";
+// import HeroBg from "../assets/Hero_bg.png";
+import HeroBg from "../assets/Hero_bg1.png";
+// import HeroBg from "../assets/Hero_bg2.png";
 
 const Hero = () => {
     return (
         <section
-            className="relative flex-col pt-[130px] text-white bg-transparent bg-cover bg-center lg:-mb-[80px] "
-        // style={{
-        //     // backgroundImage: `url(${HeroBg})`,
-        //     // backgroundSize: "cover",
-        //     // backgroundPosition: "center",
-        //     // minHeight: "100vh",
-        //     // backgroundImage: `linear-gradient(to bottom, #18578c, #FDFEFF)`,
-        // }}
+            className="relative flex-col pt-[130px] text-white bg-transparent bg-cover bg-center "
+        style={{
+            backgroundImage: `url(${HeroBg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            minHeight: "80vh",
+            // backgroundImage: `linear-gradient(to bottom, #18578c, #FDFEFF)`,
+        }}
         >
-            <div
+            {/* <div
                 className="absolute inset-0 lg:hidden sm:block md:block"
                 style={{
                     backgroundImage: `url(${HeroBg})`,
@@ -22,7 +24,7 @@ const Hero = () => {
                     // maxHeight: "100vh",
                 }}
             />
-            {/* Only apply HeroBg on tablet & up */}
+       
             <div
                 className="absolute inset-0 hidden lg:block"
                 style={{
@@ -32,14 +34,14 @@ const Hero = () => {
                     height: "100vh",
                     maxHeight: "100vh",
                 }}
-            />
+            /> */}
 
 
             {/* Overlay for readability */}
-            <div className="absolute inset-0 bg-black/10 backdrop-blur-[2px] lg:mb-[79px]"></div>
+            <div className="absolute inset-0 bg-black/10 backdrop-blur-[2px]"></div>
 
             {/* Content */}
-            <div className="relative z-10 max-w-screen-2xl w-screen mx-auto px-6 py-10 flex flex-col md:flex-row items-start md:items-start justify-around">
+            <div className="relative z-10 mx-auto px-6 py-10 flex flex-col md:flex-row items-start md:items-start justify-around">
 
                 {/* Left Section */}
                 <div className="max-w-lg">
@@ -151,15 +153,15 @@ const Hero = () => {
                     </div>
 
                     <div className="grid grid-row-3 place-items-center md:grid-cols-2 lg:grid-cols-3 gap-5 lg:h-[270px] lg:mt-11 py-5 lg:py-0 px-auto">
-                        <div className="flex flex-col items-center justify-center w-[80%] min-w-[200px] lg:h-[160px] bg-[#003B66] py-4 px-6 rounded-xl text-white gap-1 ">
+                        <div className="flex flex-col items-center justify-center w-[80%] min-w-[180px] lg:h-[160px] bg-[#003B66] py-4 px-6 rounded-xl text-white gap-1 ">
                             <span className="text-2xl lg:text-4xl font-semibold font-serif-display italic ">30+ </span>
                             <span className="text-lg lg:text-xl font-serif-display italic ">Houses Build</span>
                         </div>
-                        <div className="flex flex-col items-center justify-center w-[80%] min-w-[200px] lg:h-[160px] bg-[#003B66] py-4 px-6 rounded-xl text-white gap-1 ">
+                        <div className="flex flex-col items-center justify-center w-[80%] min-w-[180px] lg:h-[160px] bg-[#003B66] py-4 px-6 rounded-xl text-white gap-1 ">
                             <span className="text-2xl lg:text-4xl font-semibold font-serif-display italic ">5+ </span>
                             <span className="text-lg lg:text-xl font-serif-display italic ">Years of Experience</span>
                         </div>
-                        <div className="flex flex-col items-center justify-center w-[80%] min-w-[200px] lg:h-[160px] bg-[#003B66] py-4 px-6 rounded-xl text-white gap-1 ">
+                        <div className="flex flex-col items-center justify-center w-[80%] min-w-[180px] lg:h-[160px] bg-[#003B66] py-4 px-6 rounded-xl text-white gap-1 ">
                             <span className="text-2xl lg:text-4xl font-semibold font-serif-display italic ">10+ </span>
                             <span className="text-lg lg:text-xl font-serif-display italic ">Skilled Engineers</span>
                         </div>

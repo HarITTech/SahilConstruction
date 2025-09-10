@@ -93,23 +93,23 @@ const BlueprintsShowcase = () => {
       right: 0,
     },
     gridWrapper: {
-      margin: "0 3rem",
+      margin: "0 1rem",
     },
     topRow: {
       display: "grid",
       gridTemplateColumns: "2fr 1fr",
-      gap: "1.5rem",
-      marginBottom: "1.5rem",
+      gap: "1rem",
+      marginBottom: "1rem",
     },
     bottomRow: {
       display: "grid",
       gridTemplateColumns: "1fr 2fr",
-      gap: "1.5rem",
+      gap: "1rem",
     },
     card: {
       backgroundColor: "white",
-      borderRadius: "1rem",
-      padding: "1rem",
+      // borderRadius: "1rem",
+      padding: "0.5rem",
       boxShadow:
         "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
     },
@@ -246,7 +246,7 @@ const BlueprintsShowcase = () => {
             <div style={styles.gridWrapper}>
               {/* Top Row */}
               <div style={styles.topRow}>
-                <div style={styles.card}>
+                <div style={styles.card} className=" rounded-md lg:rounded-xl">
                   <div style={styles.cardContentLarge}>
                     <div
                       style={{
@@ -259,7 +259,7 @@ const BlueprintsShowcase = () => {
                   </div>
                 </div>
 
-                <div style={styles.card}>
+                <div style={styles.card} className=" rounded-md lg:rounded-xl">
                   <div style={styles.cardContentSmall}>
                     <div
                       style={{
@@ -275,7 +275,7 @@ const BlueprintsShowcase = () => {
 
               {/* Bottom Row */}
               <div style={styles.bottomRow}>
-                <div style={styles.card}>
+                <div style={styles.card} className=" rounded-md lg:rounded-xl">
                   <div style={styles.cardContentSmall}>
                     <div
                       style={{
@@ -288,7 +288,7 @@ const BlueprintsShowcase = () => {
                   </div>
                 </div>
 
-                <div style={styles.card}>
+                <div style={styles.card} className=" rounded-md lg:rounded-xl">
                   <div style={styles.cardContentLarge}>
                     <div
                       style={{

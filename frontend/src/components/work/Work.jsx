@@ -49,7 +49,7 @@ export default function Work() {
   // ✅ Dummy Data for Current Projects
   const projects = [
     {
-      img: "/2.jpg",
+      img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
       owner: "Piyush Ninawe",
       role: "Owner",
       details:
@@ -192,7 +192,7 @@ export default function Work() {
       {/* ✅ Projects for Sale Section */}
       <section className="py-24 bg-gray-50 relative">
         <div className="container mx-auto px-6">
-          <SectionTitle className="mb-16">Our Projects for sale</SectionTitle>
+          <SectionTitle className="mb-16">Our Recently Projects</SectionTitle>
           <div className="relative max-w-6xl mx-auto">
             {/* Left arrow */}
             <div className="absolute left-0 top-1/2 -translate-y-1/2 z-20">
@@ -201,7 +201,7 @@ export default function Work() {
                 onClick={() =>
                   document
                     .getElementById("sale-scroll")
-                    .scrollBy({ left: -600, behavior: "smooth" })
+                    .scrollBy({ left: -200, behavior: "smooth" })
                 }
                 className="w-10 h-10 rounded-full bg-white border border-gray-200 shadow-md flex items-center justify-center"
               >
@@ -243,7 +243,7 @@ export default function Work() {
               ].map((p, i) => (
                 <div
                   key={i}
-                  className="snap-center min-w-[200px] w-[80%] md:min-w-[380px] bg-[#EBEFF2] rounded-2xl p-6 shadow-md relative flex-shrink-0"
+                  className="snap-center min-w-[200px] w-[80%] md:max-w-[420px] bg-[#EBEFF2] rounded-2xl p-6 shadow-md relative flex-shrink-0"
                 >
                   {/* Image */}
                   <div className="rounded-lg overflow-hidden mb-4 h-48">
@@ -282,7 +282,7 @@ export default function Work() {
                 onClick={() =>
                   document
                     .getElementById("sale-scroll")
-                    .scrollBy({ left: 600, behavior: "smooth" })
+                    .scrollBy({ left: 200, behavior: "smooth" })
                 }
                 className="w-10 h-10 rounded-full bg-white border border-gray-200 shadow-md flex items-center justify-center"
               >
