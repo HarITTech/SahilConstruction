@@ -214,7 +214,7 @@ const Card = ({ design, large }) => {
   return (
     <div
       className={`relative rounded-xl overflow-hidden shadow-lg group transition transform hover:scale-105 ${
-        large ? "w-[90%] lg:max-w-[450px] md:max-w-[250px]" : "w-[90%] lg:max-w-[450px]"
+        large ? "w-[160%] lg:max-w-[400px] max-w-[350px]" : "w-[160%] lg:max-w-[400px] max-w-[350px]"
       }`}
     >
       {/* Image */}
