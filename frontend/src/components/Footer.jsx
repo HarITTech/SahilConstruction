@@ -22,7 +22,7 @@ const Footer = () => {
     setLoading(true); // ✅ Start loader
 
     try {
-      const res = await fetch("http://localhost:5000/send-mail", {
+      const res = await fetch("https://sahilconstruction.onrender.com/send-mail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
