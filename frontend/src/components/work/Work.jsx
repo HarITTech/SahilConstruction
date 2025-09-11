@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import BlueprintsShowcase from "./BlueprintsShowcase";
+import completedpro1 from "../../assets/completedpro1.jpg";
+
 import {
   Facebook,
   Instagram,
@@ -216,29 +218,34 @@ export default function Work() {
             >
               {[
                 {
-                  img: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80",
+                  img: completedpro1,
                   title: "Prime Location Villa",
                   price: "22.5L",
+                  desc: "A modern apartment complex designed with sustainability in mind. Featuring rooftop gardens, solar panels, and energy-efficient appliances, this property offers a green living experience without compromising on luxury.",
                 },
                 {
                   img: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=80",
                   title: "Modern Apartment Block",
                   price: "35.0L",
+                  desc: "A modern apartment complex designed with sustainability in mind. Featuring rooftop gardens, solar panels, and energy-efficient appliances, this property offers a green living experience without compromising on luxury.",
                 },
                 {
                   img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
                   title: "Luxury Office Tower",
                   price: "50.0L",
+                  desc: "A modern apartment complex designed with sustainability in mind. Featuring rooftop gardens, solar panels, and energy-efficient appliances, this property offers a green living experience without compromising on luxury.",
                 },
                 {
                   img: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80",
                   title: "Suburban Family House",
                   price: "18.0L",
+                  desc: "A modern apartment complex designed with sustainability in mind. Featuring rooftop gardens, solar panels, and energy-efficient appliances, this property offers a green living experience without compromising on luxury.",
                 },
                 {
                   img: "https://images.unsplash.com/photo-1600585154511-7c1b6a3ad5ef?auto=format&fit=crop&w=800&q=80",
                   title: "Eco-Friendly Apartments",
                   price: "40.0L",
+                  desc: "A modern apartment complex designed with sustainability in mind. Featuring rooftop gardens, solar panels, and energy-efficient appliances, this property offers a green living experience without compromising on luxury.",
                 },
               ].map((p, i) => (
                 <div
@@ -257,12 +264,11 @@ export default function Work() {
                   <div className="text-[#043152]">
                     <h3 className="text-lg font-bold mb-1">{p.title}</h3>
                     <p className="text-sm leading-relaxed mb-3 text-gray-600">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry.
+                      {p.desc}
                     </p>
                     <div className="text-xs text-[#043152] mb-3">
                       <div className="font-semibold">Area (sq.m)</div>
-                      <div className="text-sm">From 99 to 999 Sqm</div>
+                      <div className="text-sm">From 150 to 250 Sqm</div>
                     </div>
                   </div>
                   {/* Price Tag */}

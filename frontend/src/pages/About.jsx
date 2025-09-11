@@ -4,25 +4,25 @@ const teamMembers = [
   {
     name: "John Doe",
     role: "CEO & Founder",
-    img: "https://randomuser.me/api/portraits/men/32.jpg",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDnAV2195eKjdsIWb9qODnuYgxUnwJ0exESA&s",
     desc: "John drives the company vision with a decade of experience in construction management and business strategy.",
   },
   {
     name: "Jane Smith",
     role: "Project Manager",
-    img: "https://randomuser.me/api/portraits/women/45.jpg",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEFlCxAfL-D3y4JVh8rnRPUoQ5pMsbf6cjAg&s",
     desc: "Jane manages our projects ensuring quality, timeliness, and client satisfaction across all builds.",
   },
   {
     name: "Michael Brown",
     role: "Lead Architect",
-    img: "https://randomuser.me/api/portraits/men/65.jpg",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDnAV2195eKjdsIWb9qODnuYgxUnwJ0exESA&s",
     desc: "Michael designs innovative and sustainable building solutions, focusing on functionality and aesthetics.",
   },
   {
     name: "Emily White",
     role: "Senior Engineer",
-    img: "https://randomuser.me/api/portraits/women/68.jpg",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEFlCxAfL-D3y4JVh8rnRPUoQ5pMsbf6cjAg&s",
     desc: "Emily ensures technical excellence and structural integrity on all our projects with meticulous engineering expertise.",
   },
 ];
@@ -36,28 +36,18 @@ const About = () => {
       </h1>
 
       {/* About Card */}
-      <div className="w-[94%]  bg-[rgba(235,239,242,0.8)] border-2 border-[#043152] drop-shadow-lg backdrop-blur-[47px] p-6 md:p-10 lg:p-12 text-center text-[#043152] text-[1.15rem] leading-7 rounded-xl font-normal mb-14">
+      <div className="w-[80%]  bg-[rgba(235,239,242,0.8)] border-2 border-[#043152] drop-shadow-lg backdrop-blur-[47px] p-6 md:p-10 lg:p-12 text-center text-[#043152] text-[1.15rem] leading-7 rounded-xl font-normal mb-14">
         <span className="text-[#C30000] font-bold text-lg block mb-4">
           (History of the company and little bit of compliments)
         </span>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.
+        Sahil Construction has been shaping dreams into reality for the past 6 years, delivering quality, trust, and innovation in the construction industry. Since our inception, we have successfully completed a wide range of residential, commercial, and infrastructure projects, earning a reputation for excellence and reliability.
         <br />
         <br />
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s.
+        Our commitment lies in creating strong foundations—both in the structures we build and the relationships we develop with our clients. With a team of skilled professionals, advanced techniques, and a customer-centric approach, we ensure every project we undertake meets the highest standards of safety, durability, and design.
         <br />
         <br />
-        Lorem Ipsum has been the industry's standard dummy text ever since the
-        1500s, when an unknown printer took a galley of type.
+        At Sahil Construction, we believe construction is not just about building structures, but about building lives, communities, and a better future. Whether it’s designing modern homes, developing sustainable spaces, or executing large-scale projects, we stand by our promise of timely delivery and uncompromised quality.
+        <br />
       </div>
 
       {/* Why Choose Us Section (Add-On) */}

@@ -5,11 +5,13 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Work from "./components/work/Work";
 import Services from "./pages/Services";
+import ScrollToTop from "./components/ScrollToTop";
 // import Contact from "./components/Contact";
 
 function App() {
   return (
     <div className="flex flex-col min-h-screen">
+      <ScrollToTop/> 
       <Navbar />
       <main className="flex-1">
         <Routes>

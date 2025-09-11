@@ -66,9 +66,9 @@ const Hero = () => {
                     <h2 className="text-[40px] lg:text-[46px] text-[#043152] font-bold">Unique Design & Highly Engineered</h2>
                     <p className="text-[#043152] text-[25px] mt-2">For your betterment</p>
                     <div className="mt-6 flex items-center justify-between">
-                        <button className="bg-golden-yellow text-navy-blue px-4 py-2 rounded-md hover:bg-yellow-500 transition">
+                        <a href="#designs" className="bg-golden-yellow text-navy-blue px-4 py-2 rounded-md hover:bg-yellow-500 transition">
                             Explore →
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>

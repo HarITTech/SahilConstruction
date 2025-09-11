@@ -43,31 +43,33 @@ const services1 = [
 const services2 = [
   {
     title: "Building Construction",
-    desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-    when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-    It has survived not only five centuries, but also the leap into electronic typesetting, 
-    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets 
-    containing Lorem Ipsum passages, and more recently with desktop publishing software.`,
-    img: "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80",
+    desc: "From laying the foundation to completing the final structure, we manage every stage of the building process with care and precision. Our team focuses on delivering projects that are strong, reliable, and built to last. Whether it’s residential, commercial, or mixed-use developments, we tailor our construction approach to match your vision, timeline, and budget. With attention to detail and commitment to quality, we turn ideas into buildings that stand the test of time.",
+    img: "https://blog.credlix.com/wp-content/uploads/2019/09/62-828x550.jpg",
   },
   {
-    title: "Villa Construction",
-    desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`,
-    img: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
+    title: "Interior Design",
+    desc: "We believe interiors should reflect both function and personality. Our team combines precision and creativity to transform empty spaces into welcoming environments that inspire. From the structural layout to the smallest finishing detail, we design with purpose and style, ensuring every room feels balanced, comfortable, and uniquely yours. Whether it’s modern, classic, or customized themes, our interior solutions turn houses into homes and spaces into experiences.",
+    img: "https://previews.123rf.com/images/shootdiem/shootdiem1909/shootdiem190900054/132075289-interior-modern-empty-house-beautiful-living-room-without-furniture.jpg",
   },
   {
-    title: "Commercial Building construction",
-    desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`,
-    img: "https://images.unsplash.com/photo-1523413363574-c30aa1c2a516?auto=format&fit=crop&w=800&q=80",
+    title: "Flat System Contruction",
+    desc: "Our flat system construction services are designed for speed, efficiency, and modern living. By using streamlined techniques and reliable materials, we deliver durable structures that maximize space and functionality. Each project is carefully planned and executed to meet high safety standards while maintaining a clean, contemporary design. Whether it’s residential apartments, housing complexes, or commercial flats, we provide practical solutions that bring comfort and long-term value to every build.",
+    img: "https://thumbs.dreamstime.com/b/high-rise-buildings-under-construction-25292487.jpg",
   },
   {
-    title: "Concrete Densification flooring",
-    desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`,
-    img: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80",
+    title: "3D Designing",
+    desc: "Before the first brick is laid, our 3D design service helps you see your project in stunning detail. We create lifelike renderings that allow you to explore layouts, finishes, and design choices with confidence. This process makes it easier to plan, adjust, and perfect every aspect before construction begins, saving both time and cost. With our advanced visualization tools, your ideas are transformed into realistic previews that bring clarity to your vision and ensure the final outcome matches your expectations.",
+    img: "https://www.dukebuildersinc.com/uploads/4/2/7/3/42732311/doll-house-full_orig.jpg",
+  },
+  {
+    title: "Government Projects",
+    desc: "We specialize in building strong, reliable infrastructure for public institutions that stand as pillars of progress. From administrative offices to civic centers and other government facilities, our projects are designed to meet the highest standards of safety, durability, and compliance. We combine careful planning, advanced construction techniques, and a commitment to quality to deliver buildings that serve communities for generations. Each project reflects our dedication to creating spaces that support governance, public service, and long-term growth.",
+    img: "https://st4.depositphotos.com/4147207/19816/i/450/depositphotos_198161714-stock-photo-kuala-lumpur-malaysia-july-2017.jpg",
+  },
+  {
+    title: "Material with Construction",
+    desc: "We provide more than just construction services—we also supply the quality materials needed to bring every project to life. From cement and steel to bricks and finishing products, we source and deliver only trusted materials that ensure durability and strength. By combining expert building services with reliable resources, we create a seamless construction process where everything you need is handled in one place. This integrated approach guarantees efficiency, consistency, and results that stand the test of time.",
+    img: "https://cdn.prod.website-files.com/6682b09346626706d72ebbd5/688a389aca86cccfc6a884b7_construction%20materials.webp",
   },
 ];
 

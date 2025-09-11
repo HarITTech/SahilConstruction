@@ -159,7 +159,7 @@ const Designs = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="relative pb-16 pt-10 px-20 bg-gradient-to-br from-white via-gray-50 to-blue-50">
+    <section className="relative pb-16 pt-10 px-20 bg-gradient-to-br from-white via-gray-50 to-blue-50" id="designs">
       <div className="container mx-auto px-4">
         {/* Heading */}
         <h2 className="text-center text-3xl md:text-[60px] font-serif text-navy-blue mb-12">

@@ -1,26 +1,54 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast"; // ✅ Import toast
+import haritLogo from "../assets/HarIT_Tech_Logo.png";
 
 const Footer = () => {
+  const location = useLocation();
+  const currentPath = location.pathname;
+
+  const linkClasses = (path) =>
+    currentPath === path
+      ? "text-golden-yellow font-semibold"
+      : "hover:text-golden-yellow transition";
+
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
+  const [loading, setLoading] = useState(false); // ✅ Loader state
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("Form submitted! (You can connect backend/EmailJS here)");
-    setForm({ name: "", email: "", phone: "", message: "" });
+    setLoading(true); // ✅ Start loader
+
+    try {
+      const res = await fetch("http://localhost:5000/send-mail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      if (!res.ok) throw new Error("Failed to send message");
+
+      toast.success("Message sent successfully ✅"); // ✅ Success toast
+      setForm({ name: "", email: "", phone: "", message: "" });
+    } catch (error) {
+      toast.error("Something went wrong ❌"); // ✅ Error toast
+    } finally {
+      setLoading(false); // ✅ Stop loader
+    }
   };
 
   return (
     <div className="w-full flex flex-col justify-end bg-white" id="contact">
+      {/* Toast Container */}
+      <Toaster position="top-right" reverseOrder={false} />
+
       {/* Contact Section */}
       <div className="bg-[#f6f8fa] mx-auto mt-10 mb-[-80px] px-4 py-10 rounded-lg shadow-md w-[90%] max-w-[900px] text-center relative z-20">
         <h2 className="text-[2.1rem] font-normal mb-2">Need any help?..</h2>
         <h3 className="text-[1.7rem] font-normal mb-7">Contact us</h3>
-        <form
-          className="flex flex-col items-center"
-          onSubmit={handleSubmit}
-        >
+        <form className="flex flex-col items-center" onSubmit={handleSubmit}>
           <input
             type="text"
             name="name"
@@ -57,9 +85,14 @@ const Footer = () => {
           />
           <button
             type="submit"
-            className="px-9 py-2 rounded-md bg-[#eee] text-black text-[1.1rem] cursor-pointer mt-2 hover:bg-[#dde6ef]"
+            disabled={loading}
+            className="px-9 py-2 rounded-md bg-[#eee] text-black text-[1.1rem] cursor-pointer mt-2 hover:bg-[#dde6ef] flex items-center justify-center gap-2"
           >
-            Send
+            {loading ? (
+              <span className="loader border-2 border-t-transparent border-black rounded-full w-5 h-5 animate-spin"></span>
+            ) : (
+              "Send"
+            )}
           </button>
         </form>
       </div>
@@ -71,11 +104,11 @@ const Footer = () => {
           <div className="flex-1 min-w-[170px] mx-2 mb-6">
             <h4 className="text-[1.12rem] mb-3">Quick Links</h4>
             <ul className="space-y-2">
-              <li>Home</li>
-              <li>Services</li>
-              <li>Work</li>
-              <li>About Us</li>
-              <li>Contact Us</li>
+              <li><Link to="/" className={linkClasses("/")}>Home</Link></li>
+              <li><Link to="/work" className={linkClasses("/work")}>Work</Link></li>
+              <li><Link to="/services" className={linkClasses("/services")}>Services</Link></li>
+              <li><Link to="/about" className={linkClasses("/about")}>About us</Link></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
           <div className="flex-1 min-w-[170px] mx-2 mb-6">
@@ -91,11 +124,11 @@ const Footer = () => {
           <div className="flex-1 min-w-[170px] mx-2 mb-6">
             <h4 className="text-[1.12rem] mb-3">Services</h4>
             <ul className="space-y-2">
-              <li>Building Construction</li>
-              <li>Infrastructure Development</li>
-              <li>Villa Construction</li>
-              <li>Commercial Building construction</li>
-              <li>View all</li>
+              <li> <Link to="/services">Building Construction</Link></li>
+              <li><Link to="/services">Infrastructure Development</Link></li>
+              <li><Link to="/services">Villa Construction</Link></li>
+              <li><Link to="/services">Commercial Building construction</Link></li>
+              <li><Link to="/services">View all</Link></li>
             </ul>
           </div>
           <div className="flex-1 min-w-[170px] mx-2 mb-6">
@@ -105,25 +138,31 @@ const Footer = () => {
               industry. Lorem Ipsum has been
             </p>
             <button className="bg-[#eee] text-[#222] rounded-md px-7 py-2 text-[1rem] cursor-pointer mt-2">
-              Google map image
+              Google map
             </button>
           </div>
         </div>
 
         {/* Footer Bottom */}
-        <div className="bg-[#112d43] border-t border-[#23405f] py-4 text-center text-[0.97rem]">
-          <span>© 2024 Relume. All rights reserved.</span>
-          <div className="flex justify-center items-center space-x-5 mt-2">
-            <a href="#" className="underline">
-              Privacy Policy
+        <div className="bg-[#112d43] text-center text-[0.97rem]">
+          <span>© 2025 Relume. All rights reserved.</span>
+          <div className="bg-transparent text-[#ffffff] border-t border-[#23405f] text-center pt-4 mt-2">
+            <p className="text-[14px] font-medium">
+              Built with <span className="text-yellow-400">🧡</span> by
+            </p>
+            <a href="https://harittech.in" target="_blank" rel="noopener noreferrer">
+              <div className="flex items-center justify-center gap-2 mt-[2px]">
+                <img
+                  src={haritLogo}
+                  alt="HarIT Tech Logo"
+                  className="w-7 h-7 rounded-full"
+                />
+                <span className="text-[16px] font-semibold">HarIT Tech Solution</span>
+              </div>
             </a>
-            <a href="#" className="underline">
-              Terms of Service
-            </a>
-            <a href="#" className="underline">
-              Cookie Settings
-            </a>
-            <div className="ml-5">🔗</div>
+            <p className="mt-[2px] text-[12px] text-[#1e293b] font-light">
+              Digital transformation experts
+            </p>
           </div>
         </div>
       </footer>
@@ -132,62 +171,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-
-// import React from "react";
-
-// const Footer = () => {
-//   return (
-//     <footer className="bg-[#0f1724] text-white py-10">
-//       <div className="container mx-auto px-6 grid md:grid-cols-4 gap-8">
-//         {/* Quick Links */}
-//         <div>
-//           <h4 className="font-bold mb-4">Quick Links</h4>
-//           <ul className="space-y-2">
-//             <li><a href="#home" className="hover:text-yellow-400">Home</a></li>
-//             <li><a href="#services" className="hover:text-yellow-400">Services</a></li>
-//             <li><a href="#work" className="hover:text-yellow-400">Work</a></li>
-//             <li><a href="#about" className="hover:text-yellow-400">About Us</a></li>
-//             <li><a href="#contact" className="hover:text-yellow-400">Contact</a></li>
-//           </ul>
-//         </div>
-
-//         {/* Follow Us */}
-//         <div>
-//           <h4 className="font-bold mb-4">Follow Us</h4>
-//           <ul className="space-y-2">
-//             <li>Facebook</li>
-//             <li>Twitter</li>
-//             <li>Instagram</li>
-//             <li>LinkedIn</li>
-//             <li>YouTube</li>
-//           </ul>
-//         </div>
-
-//         {/* Services */}
-//         <div>
-//           <h4 className="font-bold mb-4">Services</h4>
-//           <ul className="space-y-2">
-//             <li>Building Construction</li>
-//             <li>Infrastructure Development</li>
-//             <li>Villa Construction</li>
-//             <li>Commercial Building</li>
-//           </ul>
-//         </div>
-
-//         {/* Address */}
-//         <div>
-//           <h4 className="font-bold mb-4">Address</h4>
-//           <p>Some address line, city, state</p>
-//           <p>Pin Code - 440001</p>
-//         </div>
-//       </div>
-
-//       <div className="mt-10 text-center text-sm text-gray-400">
-//         © 2024 Sahil Construction. All rights reserved.
-//       </div>
-//     </footer>
-//   );
-// };
-
-// export default Footer;
