@@ -54,6 +54,12 @@ const Navbar = () => {
         <div className="hidden md:flex space-x-8 text-white font-medium">
           <a
             href="#contact"
+            onClick={(e) => {
+              e.preventDefault();
+              document.querySelector("#contact")?.scrollIntoView({
+                behavior: "smooth"
+              });
+            }}
             className="bg-transparent border border-white px-4 py-2 rounded-md hover:bg-golden-yellow hover:border-golden-yellow hover:text-navy-blue transition"
           >
             Contact us
@@ -86,6 +92,12 @@ const Navbar = () => {
           </Link>
           <a
             href="#contact"
+            onClick={(e) => {
+              e.preventDefault();
+              document.querySelector("#contact")?.scrollIntoView({
+                behavior: "smooth"
+              });
+            }}
             className="block bg-golden-yellow text-navy-blue px-4 py-2 rounded-md text-center"
           >
             Contact us
