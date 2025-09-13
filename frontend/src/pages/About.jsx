@@ -1,11 +1,12 @@
 import React from "react";
+import founder from "../assets/founder.jpg"
 
 const teamMembers = [
   {
-    name: "John Doe",
+    name: "Ashish Meshram",
     role: "CEO & Founder",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDnAV2195eKjdsIWb9qODnuYgxUnwJ0exESA&s",
-    desc: "John drives the company vision with a decade of experience in construction management and business strategy.",
+    img: founder,
+    desc: "Ashish leads Sahil Construction with a clear vision of delivering strong, reliable, and innovative building solutions that stand the test of time.",
   },
   {
     name: "Jane Smith",
@@ -97,8 +98,9 @@ const About = () => {
               <img
                 src={member.img}
                 alt={member.name}
-                className="w-full aspect-square object-cover mb-4 rounded-lg"
+                className="w-full h-auto object-cover mb-4 rounded-lg"
               />
+              {/* aspect-square */}
               <div className="text-[#043152] font-bold  text-lg mb-1">
                 {member.name}
               </div>
